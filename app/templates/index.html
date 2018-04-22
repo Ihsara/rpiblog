@@ -1,8 +1,12 @@
-<html>
+<html> 
     <head>
-        <title>{{ title }} - Microblog</title>
+        {% if title %}
+        <title>{{ title }} - Microblog on Raspberry Pi</title>
+        {% else %}
+        <title> Welcome to Châu's microblog on Raspberry Pi</title>
+        {% endif %}
     </head>
     <body>
-        <h1>Hello, {{ user.username }}!</h1>
+        <h1> Hello, {{user.username}}</h1>
     </body>
 </html>
